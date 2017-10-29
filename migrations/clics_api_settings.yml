@@ -1,0 +1,52 @@
+id: clics_api_settings
+label: Clics API Settings
+migration tags:
+  - clics
+source:
+  plugin: url
+  urls: "http://cogabart.denvertech.org/2018-69.json"
+  item_selector: inits
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  ids:
+    key:
+      type: string
+  fields:
+    -
+      name: number
+      label: 'number'
+      selector: number
+    -
+      name: key
+      label: 'key'
+      selector: "key"
+    -
+      name: initiative_title
+      label: 'Initiative Title'
+      selector: initiative_title
+    -
+      name: election_year
+      label: 'election year'
+      selector: election_year
+    -
+      name: initiative_status
+      label: 'initiative_status'
+      selector: initiative_status
+    -
+      name: date_submitted
+      label: 'date_submitted'
+      selector: date_submitted
+    -
+      name: initiative_type
+      label: 'initiative_type'
+      selector: initiative_type
+process:
+  type:
+    plugin: default_value
+    default_value: initiative
+  title: initiative_title
+  field_key: key
+  field_election_year: election_year
+  field_initiative_number: number
+destination:
+  plugin: entity:node

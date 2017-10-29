@@ -1,0 +1,9 @@
+name: CGA Initiatives Module
+description: Migrates and Displays Initiatives
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:migrate

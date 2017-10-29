@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_election_year
+    - node.type.initiative
+id: node.initiative.field_election_year
+field_name: field_election_year
+entity_type: node
+bundle: initiative
+label: 'Election Year'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 2018
+default_value_callback: ''
+settings:
+  min: 2010
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
+

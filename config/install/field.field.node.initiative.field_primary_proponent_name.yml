@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_proponent_name
+    - node.type.initiative
+id: node.initiative.field_primary_proponent_name
+field_name: field_primary_proponent_name
+entity_type: node
+bundle: initiative
+label: 'Primary Proponent Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
+

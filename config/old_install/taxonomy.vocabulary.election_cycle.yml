@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Election Cycle'
-vid: election_cycle
-description: ''
-hierarchy: 0
-weight: 0
-

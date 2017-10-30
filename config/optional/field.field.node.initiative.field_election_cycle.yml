@@ -1,0 +1,29 @@
+uuid: 8ab15ddc-c45f-4ae7-85d1-dcacc12e8867
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_election_cycle
+    - node.type.initiative
+    - taxonomy.vocabulary.election_cycle
+id: node.initiative.field_election_cycle
+field_name: field_election_cycle
+entity_type: node
+bundle: initiative
+label: 'Election Cycle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      election_cycle: election_cycle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

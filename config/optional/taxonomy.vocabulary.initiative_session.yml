@@ -1,0 +1,9 @@
+uuid: c130ef80-0817-4e2a-ab9d-8c2b303c2439
+langcode: en
+status: true
+dependencies: {  }
+name: 'Initiative Session'
+vid: initiative_session
+description: ''
+hierarchy: 0
+weight: 0

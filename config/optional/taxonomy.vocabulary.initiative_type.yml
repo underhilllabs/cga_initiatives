@@ -1,0 +1,9 @@
+uuid: 097b6336-118f-4dde-a4d3-7bfab6bd40fa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Initiative Type'
+vid: initiative_type
+description: ''
+hierarchy: 0
+weight: 0

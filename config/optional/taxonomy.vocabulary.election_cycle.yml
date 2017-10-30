@@ -1,0 +1,9 @@
+uuid: 270096fd-92bd-4a8d-a8c1-733d31123839
+langcode: en
+status: true
+dependencies: {  }
+name: 'Election Cycle'
+vid: election_cycle
+description: ''
+hierarchy: 0
+weight: 0

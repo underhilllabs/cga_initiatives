@@ -1,0 +1,9 @@
+uuid: 81fc61d1-f742-4cd5-99b1-aea7390ced78
+langcode: en
+status: true
+dependencies: {  }
+name: 'Initiative Status'
+vid: initiative_status
+description: ''
+hierarchy: 0
+weight: 0

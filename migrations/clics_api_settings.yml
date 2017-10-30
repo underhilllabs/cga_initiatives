@@ -4,8 +4,8 @@ migration tags:
   - clics
 source:
   plugin: url
-  urls: "http://cogabart.denvertech.org/2018-69.json"
-  item_selector: inits
+  urls: ["http://cogabart.denvertech.org/2018-63.json","http://cogabart.denvertech.org/2018-70.json","http://cogabart.denvertech.org/2018-69.json","http://cogabart.denvertech.org/2018-70.json"]
+  item_selector: 0
   data_fetcher_plugin: http
   data_parser_plugin: json
   ids:
@@ -24,6 +24,10 @@ source:
       name: initiative_title
       label: 'Initiative Title'
       selector: initiative_title
+    -
+      name: election_cycle
+      label: 'election cycle'
+      selector: election_cycle
     -
       name: election_year
       label: 'election year'
@@ -48,5 +52,27 @@ process:
   field_key: key
   field_election_year: election_year
   field_initiative_number: number
+  field_date_submitted: date_submitted
+  field_initiative_status:
+    -
+      plugin: explode
+      delimiter: ', '
+      source: initiative_status
+    -
+      plugin: entity_generate
+  field_election_cycle:
+    -
+      plugin: explode
+      delimiter: ', '
+      source: election_cycle
+    -
+      plugin: entity_generate
+  field_initiative_type:
+    -
+      plugin: explode
+      delimiter: ', '
+      source: initiative_type
+    -
+      plugin: entity_generate
 destination:
   plugin: entity:node

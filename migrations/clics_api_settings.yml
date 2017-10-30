@@ -4,6 +4,7 @@ migration tags:
   - clics
 source:
   plugin: url
+  track_changes: true
   urls: ["http://cogabart.denvertech.org/2018-63.json","http://cogabart.denvertech.org/2018-67.json","http://cogabart.denvertech.org/2018-69.json","http://cogabart.denvertech.org/2018-70.json"]
   item_selector: 0
   data_fetcher_plugin: http

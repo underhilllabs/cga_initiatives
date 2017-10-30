@@ -53,26 +53,14 @@ process:
   field_election_year: election_year
   field_initiative_number: number
   field_date_submitted: date_submitted
-  field_initiative_status:
-    -
-      plugin: explode
-      delimiter: ', '
-      source: initiative_status
-    -
-      plugin: entity_generate
+  field_current_status:
+    source: initiative_status
+    plugin: entity_generate
   field_election_cycle:
-    -
-      plugin: explode
-      delimiter: ', '
-      source: election_cycle
-    -
-      plugin: entity_generate
+    source: election_cycle
+    plugin: entity_generate
   field_initiative_type:
-    -
-      plugin: explode
-      delimiter: ', '
-      source: initiative_type
-    -
-      plugin: entity_generate
+    source: initiative_type
+    plugin: entity_generate
 destination:
   plugin: entity:node

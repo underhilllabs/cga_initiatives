@@ -1,4 +1,4 @@
-id: clics_api_settings
+id: initiatives
 label: Clics API Settings
 migration tags:
   - clics
@@ -42,6 +42,10 @@ source:
       label: 'date_submitted'
       selector: date_submitted
     -
+      name: proponents
+      label: 'proponents'
+      selector: proponents
+    -
       name: initiative_type
       label: 'initiative_type'
       selector: initiative_type
@@ -50,6 +54,9 @@ process:
     plugin: default_value
     default_value: initiative
   title: initiative_title
+  #field_primary_proponent_name:
+  #  plugin: iterator
+  #  source: proponents
   field_key: key
   field_election_year: election_year
   field_initiative_number: number
